@@ -17,6 +17,20 @@
 //       '### '
 //       '####'
 
-function steps(n) {}
+function steps(n, stepCount = 1) {
+  const arr = new Array(n).fill(' ')
+  const result = [...new Array(stepCount).fill('#'), ...arr.slice(stepCount)]
+  console.log(result.join(''))
+  if (stepCount === n) return;
+  steps(n, stepCount + 1)
+}
+
+// function steps(n) {
+//   for (let i = 1; i <= n; i++) {
+//     const arr = new Array(n).fill(' ')
+//     const steps = [...new Array(i).fill('#'), ...arr.slice(i)]
+//     console.log(steps.join(''))
+//   }
+// }
 
 module.exports = steps;
