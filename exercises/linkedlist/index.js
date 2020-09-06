@@ -122,7 +122,7 @@ class LinkedList {
     const size = this.size();
     for(let i = 0; i < size; i++) {
       const node = this.getAt(i);
-      callback.call(this, node, i)
+      callback(node, i)
     }
   }
 }
