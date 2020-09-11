@@ -29,6 +29,20 @@ class Tree {
   constructor () {
     this.root = null;
   }
+
+
+  traverseBF (callback) {
+    let queue = this.root ? [this.root] : [];
+
+    while (queue.length > 0) {
+      const nextQueue = [];
+      queue.forEach((node) => {
+        callback(node);
+        nextQueue.push(...node.children);
+      })
+      queue = nextQueue;
+    }
+  }
 }
 
 module.exports = { Tree, Node };
