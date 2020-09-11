@@ -43,6 +43,16 @@ class Tree {
       queue = nextQueue;
     }
   }
+
+  traverseDF (callback) {
+    let stuck = this.root ? [this.root] : [];
+
+    while (stuck.length > 0) {
+      const node = stuck.shift();
+      callback(node);
+      stuck.unshift(...node.children);
+    }
+  }
 }
 
 module.exports = { Tree, Node };
