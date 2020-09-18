@@ -18,11 +18,11 @@ describe('Bubble sort', () => {
   });
 });
 
-// describe('Selection sort', () => {
-//   test('sorts an array', () => {
-//     expect(selectionSort(getArray())).toEqual(getSortedArray());
-//   });
-// });
+describe('Selection sort', () => {
+  test('sorts an array', () => {
+    expect(selectionSort(getArray())).toEqual(getSortedArray());
+  });
+});
 
 // describe('Merge sort', () => {
 //   test('merge function can join together two sorted arrays', () => {
